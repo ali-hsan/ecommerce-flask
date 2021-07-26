@@ -206,6 +206,7 @@ def add_item():
             quantity=form.quantity.data,
             on_sale=form.on_sale.data,
             category=category,
+            category_id=category.id,
             created=datetime.now(),
             updated=datetime.now()
         )
