@@ -49,17 +49,11 @@ nav .navbar-toggler:hover {
     transform: scale(1.1);
 }
 
-nav .collapse {
-    padding: 10px;
-}
-
-nav .collapse ul li {
-    padding: 5px;
-    margin-top: 10px;
-    text-align: center;
-}
 
 nav .nav-item {
+    text-align: center;
+    margin-top: 5px;
+    padding: 10px;
     background-color: #000000;
     font-weight: bold;
     border-radius: 10px;
