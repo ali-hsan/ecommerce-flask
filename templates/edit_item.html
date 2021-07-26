@@ -1,0 +1,41 @@
+{% import "bootstrap/wtf.html" as wtf %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Edit Product - Stunner Vision</title>
+  <!-- Favicon-->
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/favicon.ico') }}" />
+  <!-- Bootstrap icons-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link href="{{ url_for('static', filename='css/bootstarp.css') }}" rel="stylesheet" />
+  <link href="{{ url_for('static', filename='css/form_styles.css') }}" rel="stylesheet" />
+</head>
+<body>
+<!-- Navigation-->
+  {% include 'navbar.html' %}
+
+<div class='form-container'>
+<form class="form form-horizontal" method="post" action'/edit_item'>
+<center><h2 class='display-4'> EDIT ITEM </h2></center>
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      {% for message in messages %}
+        <b><div class="alert alert-danger">{{ message }}</div></b>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+  {{ ckeditor.load() }}
+  {{ wtf.quick_form(form) }}
+</form>
+</div>
+
+{% include 'footer.html' %}
+
+ <!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

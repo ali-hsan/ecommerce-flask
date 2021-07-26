@@ -1,0 +1,344 @@
+/* CUSTOM STYLE */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+body {
+    background-color: #000;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn:focus,
+.btn:active {
+    box-shadow: none !important;
+    outline: 0px !important;
+}
+
+.form-container {
+    margin-top: 56px;
+}
+
+nav {
+    color: white !important;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    position: fixed !important;
+    width: 100%;
+    top: 0;
+    z-index: 11111111111;
+}
+
+nav a {
+    color: white !important;
+}
+
+nav .navbar-toggler {
+    color: white;
+    font-size: 25px;
+    transition: 0.5s;
+    border-radius: 50%;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+nav .navbar-toggler:hover {
+    color: #920000;
+    transform: scale(1.1);
+}
+
+nav .collapse {
+    padding: 10px;
+}
+
+nav .collapse ul li {
+    padding: 5px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+nav .nav-item {
+    background-color: #000000;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    transition: 0.5s;
+}
+
+nav .cart-btn {
+    background: white;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #000000;
+    width: 100%;
+    transition: 0.5s;
+    padding-left: 10px;
+}
+
+nav .nav-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 10px 0 #000000;
+}
+
+nav .cart-btn:hover {
+    color: white;
+    background-color: #000000;
+    transform: scale(1.05);
+    box-shadow: 0 10px 10px 0 #000000;
+    border-radius: 10px;
+}
+
+nav .dropdown a:hover {
+    background-color: #000000;
+    color: white !important;
+}
+
+#navbarDropdown {
+    background: #000000;
+    color: white !important;
+}
+
+nav .dropdown-item {
+    color: #000000 !important;
+    font-weight: bold;
+    border-radius: 5px !important;
+}
+
+nav .dropdown-menu a:hover {
+    border-radius: 0px;
+}
+
+.navbar-brand {
+    color: white !important;
+    font-weight: 900;
+}
+
+h2 {
+    margin: 20px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    font-weight: 800 !important;
+    letter-spacing: 2px;
+    color: white;
+    text-shadow: 10px 10px 10px #000000;
+    background-color: #920000;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='443' height='53.2' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='20.8' %3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
+    -webkit-background-clip: text;
+    background-clip: text;
+    transition: 0.5s;
+}
+
+h2:hover {
+    color: transparent;
+    text-shadow: inherit;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+a {
+    color: #920000;
+}
+
+a:hover {
+    color: #000000;
+}
+
+.form-container {
+    padding: 2em;
+}
+
+form {
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+    color: white !important;
+    border-radius: 10px;
+    background-color: #000000;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='425' height='51' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23CC3734' stroke-width='6.6' %3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.errors-block {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form .img-side {
+    display: none;
+}
+
+form .container {
+    padding-left: 20px !important;
+    padding-right: 10px !important;
+}
+
+form .form-group {
+    margin-right: 12px;
+}
+
+form label {
+    margin-top: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 25px;
+    text-shadow: 10px 10px 10px #000000;
+}
+
+form input {
+    background-color: #000 !important;
+    color: white !important;
+    box-shadow: 10px 10px 10px #000000;
+    transition: 0.5s;
+    margin-right: 20px;
+    border-radius: 10px !important;
+    border: 2px white solid !important;
+}
+
+form input:hover {
+    box-shadow: 0px 0px 0px #000000;
+    border: 2px #920000 solid !important;
+}
+
+form input[type=submit] {
+    margin: 20px;
+    margin-bottom: 35px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 0;
+}
+
+form input[type=checkbox] {
+    position: relative;
+    left: 10px;
+    box-shadow: 0px 0px 0px #000000;
+}
+
+.bottom-line a:hover {
+    color: white;
+}
+
+footer {
+    margin-top: 60px;
+    border-top: 2px white solid;
+    padding-top: 10px;
+    background-color: #000000;
+}
+
+footer h6 {
+    color: #cc3734;
+}
+
+footer p {
+    color: white;
+    font-weight: 500;
+}
+
+@media (min-width:641px) {
+    .errors-block {
+        width: 60%;
+    }
+    form {
+        width: 60%;
+    }
+    form .img-side {
+        background-color: #000000;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 20 20'%3E%3Cg %3E%3Cpolygon fill='%23CC3734' points='20 10 10 0 0 0 20 20'/%3E%3Cpolygon fill='%23CC3734' points='0 10 0 20 10 20'/%3E%3C/g%3E%3C/svg%3E");
+        display: inline-block;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    form .img-side img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media (min-width: 768px) {
+    nav {
+        color: white !important;
+        background-color: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+        position: fixed !important;
+        width: 100%;
+        top: 0;
+        z-index: 11111111111;
+    }
+    nav a {
+        color: white !important;
+    }
+    nav .collapse {
+        padding: 0px;
+    }
+    nav .collapse ul li {
+        padding: 0px;
+        margin: 0;
+        margin-left: 5px;
+        text-align: center;
+    }
+    nav .nav-item {
+        background-color: #000000;
+        font-weight: bold;
+        border-radius: 10px;
+        margin-left: 5px;
+        margin-right: 5px;
+        transition: .5s;
+    }
+    nav .d-flex {
+        background-color: #920000;
+        font-weight: bold;
+        border-radius: 10px;
+        margin-left: 5px;
+        margin-right: 5px;
+        transition: .5s;
+    }
+    nav .nav-item:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 10px 0 #000000;
+    }
+    nav .d-flex button {
+        border: none;
+        color: #000000;
+        font-weight: bold;
+    }
+    nav .d-flex button:hover {
+        background-color: #000000;
+        transform: scale(1.05);
+        box-shadow: 0 10px 10px 0 #000000;
+        border-radius: 10px;
+    }
+    nav .dropdown .nav-item {
+        background-color: #920000 !important;
+    }
+    nav .dropdown a {
+        background-color: #920000;
+        color: #000000 !important;
+        border-radius: 10px;
+        transition: .3s;
+        text-align: center;
+    }
+    nav .dropdown a:hover {
+        background-color: #000000;
+        color: white !important;
+        transform: scale(1.1);
+    }
+    nav .dropdown-menu {
+        background: #920000;
+    }
+    nav .dropdown-item {
+        color: #920000 !important;
+        font-weight: bold;
+        border-radius: 0px;
+    }
+    nav .dropdown-menu a:hover {
+        border-radius: 0px;
+    }
+    .navbar-brand {
+        color: white !important;
+        font-weight: 900;
+    }
+}

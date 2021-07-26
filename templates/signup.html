@@ -1,0 +1,55 @@
+{% import "bootstrap/wtf.html" as wtf %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Sign Up - Stunner Vision</title>
+  <!-- Favicon-->
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/favicon.ico') }}" />
+  <!-- Bootstrap icons-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link href="{{ url_for('static', filename='css/bootstarp.css') }}" rel="stylesheet" />
+  <link href="{{ url_for('static', filename='css/form_styles.css') }}" rel="stylesheet" />
+</head>
+<body>
+<!-- Navigation-->
+  {% include 'navbar.html' %}
+
+  <div class='form-container'>
+<div class='errors-block'>
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+      {% for message in messages %}
+        <b><div class="alert alert-danger error" style='margin-right:10px;'>{{ message|safe }}</div></b>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+</div>
+<form class="form form-horizontal p-0" method="post" action'/signup'>
+
+<div class="container p-0">
+  <div class="row p-0">
+    <div class="col-md-6 my-auto form-side">
+    <h2 class='display-4'> SIGN UP </h2>
+  {{ ckeditor.load() }}
+  {{ wtf.quick_form(form) }}
+    </div>
+    <div class="col-md-6 img-side p-0" style='overflow:hidden;'>
+          <img src="{{ url_for('static', filename='assets/on_signup.jpg') }}">
+    </div>
+  </div>
+</div> 
+</form>
+</div>
+
+<h3 class='text-center mb-4 text-white bottom-line'><b> Have Account? <a href="{{ url_for('login') }}">Log In</a> </b></h3>
+
+      {% include 'footer.html' %}
+
+ <!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>{{ category.name }} - Stunner Vision</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/favicon.ico') }}" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="{{ url_for('static', filename='css/bootstarp.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/cb9227926b.js" crossorigin="anonymous"></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+    {% include 'navbar.html' %}
+
+    <div class="category" style='display:none;'></div>
+    <section class="category py-3" style='margin-top:56px; border-top:3px white solid;'>
+        <h2 class='display-4 cate-name' data-aos="fade-right"> {{ category.name }} </h2>
+        {% if is_admin %}
+        <a class='btn delete-all-btn' href='{{ url_for("delete_all", category_id=category.id) }}'>Delete All</a> {% endif %}
+        <div class="container px-4 px-lg-5 mt-5">
+            <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-md-3 row-cols-xl-4 justify-content-center product-card-conatiner">
+                {% for product in category.products %}
+
+                <div class="col mb-5" data-aos="fade-up">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <a href='{{ url_for("product_page", product_id=product.id) }}' class='product-link'>
+                            <div class='img-wrapper'>
+                                <div class='product_img_container'>
+                                    <img class="card-img-top" src="{{ product.images.split(',')[0] }}" alt="{{ product.name }}" />
+                                    <img class="card-img-top" src="{{ product.images.split(',')[1] }}" alt="{{ product.name }}" />
+                                </div>
+                            </div>
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">{{ product.name }}</h5>
+                                    <!-- Product price-->
+                                    {% if product.discount_price != 0.0 %} <b>RS.{{ product.discount_price }}</b> <span style='text-decoration-line: line-through; font-weight: 500;'> RS.{{ product.regular_price }}
+                  </span> {% else %}
+                                    <b>RS.{{ product.regular_price }}</b> {% endif %}
+                                </div>
+                        </a>
+                        <!-- Product actions-->
+                        {% if is_admin %}
+                        <div class="card-footer p-4 border-top-0">
+                            <div class="text-center"><a class="btn mt-auto" href="{{ url_for('edit_item', product_id=product.id) }}">Edit</a></div>
+                            <div class="text-center"><a class="btn mt-auto" href="{{ url_for('delete_product', product_id=product.id) }}">Delete</a></div>
+                        </div>
+                        {% endif %}
+                        </div>
+                    </div>
+                </div>
+
+
+                {% endfor %}
+
+            </div>
+    </section>
+
+
+
+{% include 'footer.html' %}
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
