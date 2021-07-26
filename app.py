@@ -81,7 +81,7 @@ class CartItem(db.Model):
     user = db.relationship('User', back_populates='items')
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
-# db.create_all()
+db.create_all()
 
 @login_manager.user_loader
 def load_user(user_id):
